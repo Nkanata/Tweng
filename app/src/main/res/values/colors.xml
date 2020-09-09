@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8F6F6</color>
+    <color name="colorPrimaryDark">#19043e</color>x
+    <color name="colorAccent">#FF808080</color>
+    <color name="gray">#585858</color>
+    <color name="blue">#3b0095</color>
+    <color name="X">#A4000000</color>
+
+    <!-- Commonly used colors -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorBackground">#E0E0E0</color>
+    <color name="colorIcon">#616161</color>
+
+    <!-- Colours related to text -->
+    <color name="colorTextTitle">@color/colorBlack</color>
+    <color name="colorTextDescription">#FF808080</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorTextBlue">@color/colorPrimary</color>
+
+    <!-- Colors related to CardView -->
+    <color name="cardStrokeColor">@color/colorBackground</color>
+
+    <!-- transparent -->
+    <color name="transparent">#80000000</color>
+
+</resources>

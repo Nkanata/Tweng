@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tweng">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Profile.InfluencerProfile" />
+        <activity android:name=".comments.MakeAComment" />
+        <activity
+            android:name=".chats.MessageList"
+             />
+        <activity android:name=".search.SearchableActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".Profile.ViewProfilePic"
+            android:parentActivityName=".Profile.Profile" />
+        <activity
+            android:name=".Profile.Preferences"
+            android:parentActivityName=".Profile.Profile" />
+        <activity
+            android:name=".Posting"
+            android:label="@string/title_activity_posting"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".About" />
+        <activity
+            android:name=".Profile.Profile"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Splash"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".SearchableActivity" />
+        </activity>
+
+        <service
+            android:name=".Player.MediaPlaybackService"
+            android:permission="TODO">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService" />
+            </intent-filter>
+        </service>
+        <service android:name=".Player.OnClearFromRecentService" />
+        <service android:name=".Player.MusicPlayService" />
+
+        <receiver android:name="androidx.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name=".Player.NotificationActionReceiver" />
+        
+        <provider
+            android:authorities="com.example.tweng.search.MySuggestionProvider"
+            android:name=".search.MySuggestionProvider"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <!-- Resources card view -->
+    <dimen name="cardCornerRadius">12dp</dimen>
+    <dimen name="cardImageSize">200dp</dimen>
+    <dimen name="cardElevation">0dp</dimen>
+
+    <!-- Dimensions for progress bar -->
+    <dimen name="progressHeight">16dp</dimen>
+
+    <!-- Margins and padding -->
+    <dimen name="paddingMinimum">4dp</dimen>
+    <dimen name="paddingMedium">8dp</dimen>
+    <dimen name="paddingMax">16dp</dimen>
+    <dimen name="marginMinimum">4dp</dimen>
+    <dimen name="marginMedium">8dp</dimen>
+    <dimen name="marginMax">16dp</dimen>
+
+    <!-- Dimensions for toolbar-->
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="toolbar_elevation_none">0dp</dimen>
+
+    <!-- Dimensions for text -->
+    <dimen name="textTitleSize">18sp</dimen>
+    <dimen name="textNormalSize">16sp</dimen>
+    <dimen name="textDescriptionSize">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Dimensions for ImageButtons icon-->
+    <dimen name="iconButtonHeightWidth">30dp</dimen>
+</resources>

@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">TWENG</string>
+    <string name="welcome_screen">Splash Image</string>
+    <string name="search">Search</string>
+    <string name="logo">Logo</string>
+    <string name="account">Account</string>
+    <string name="home">Home</string>
+    <string name="inbox">Inbox</string>
+    <string name="comment">Comment</string>
+    <string name="download">Download</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="username">UserName</string>
+    <string name="time">TIme</string>
+    <string name="description">song description</string>
+    <string name="genre">Genre</string>
+    <string name="search_your_favorites">Search your Favorites</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_of_the_song">Song Title</string>
+    <string name="album">Song Album</string>
+    <string name="artist">Artist</string>
+    <string name="trending">Trends for You</string>
+    <string name="name">name</string>
+    <string name="email">email</string>
+    <string name="log_out">Log out</string>
+    <string name="notifications">Notifications</string>
+    <string name="title_activity_posting">Posting</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="music_details">Music Details</string>
+    <string name="choose_song">Choose Song</string>
+    <string name="no_song_selected">No Song Selected</string>
+    <string name="post">Post</string>
+    <string name="channel_description">Uploading Music</string>
+    <string name="channel_name">Upload</string>
+    <string name="profile_pic">profile pic</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="current_username">current username</string>
+    <string name="enter_your_username">Enter your Username</string>
+    <string name="music_preferences">Add New Genres to Favorites</string>
+    <string name="hip_hop_rap">Hip-hop/Rap</string>
+    <string name="preferences">Preferences</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+
+    <string-array name="music_genres">
+        <item>Hip-Hop</item>
+        <item>GengeTone</item>
+        <item>Gospel</item>
+        <item>R&amp;B</item>
+        <item>Alternative</item>
+        <item>Children Music</item>
+        <item>Classics</item>
+        <item>Country</item>
+        <item>Fitness Music</item>
+        <item>Dance</item>
+        <item>Any Other</item>
+
+    </string-array>
+    <string name="send_to">Send to</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="delete">Delete</string>
+    <string name="profile_photo">Profile Photo</string>
+    <string name="choose">Choose</string>
+    <string name="search_tweng">Search Tweng</string>
+    <string name="username_preference_file">username_preference</string>
+    <string name="about_song">About Song</string>
+    <string name="about">About</string>
+    <string name="shared_pref_music">Music Preferences</string>
+    <string name="song_title">Song Title</string>
+    <string name="comment_starter">Comment about</string>
+    <string name="by">by</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="posted_by">Posted by</string>
+    <string name="comments">Comments</string>
+    <string name="choose_art">Choose Art</string>
+    <string name="token">Token</string>
+    <string name="posts">Posts</string>
+    <string name="no_messages">No Messages</string>
+    <string name="explore">Explore</string>
+    <string name="search_key">Try Searching Albums, Artists, Songs or Influencer</string>
+    <string name="latest_uploads">Latest Uploads</string>
+    <string name="top_charts">Top Charts</string>
+    <string name="try_again">Check Connection and Try Again</string>
+    <string name="no_results">No reults found</string>
+</resources>
