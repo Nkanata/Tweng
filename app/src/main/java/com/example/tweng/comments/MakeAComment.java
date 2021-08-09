@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -41,9 +42,9 @@ public class MakeAComment extends AppCompatActivity {
     HomeViewModel viewModel;
     List<Music> musicList1;
 
-    private FirebaseAuth mAuth = FirebaseAuth.getInstance();
-    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -83,11 +84,7 @@ public class MakeAComment extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 comment_box.setText("");
                 comment_box.setText(s);
-                if (count == 0) {
-                    post_comment.setEnabled(false);
-                }else {
-                    post_comment.setEnabled(true);
-                }
+                post_comment.setEnabled(count != 0);
                 //comment_added = s.toString();
             }
 
@@ -119,6 +116,7 @@ public class MakeAComment extends AppCompatActivity {
         viewModel.getMusicPost().observe(this, new Observer<List<Music>>() {
             @Override
             public void onChanged(List<Music> musicList) {
+                Log.d("Music list size", String.valueOf(musicList.size()));
                 Music music = musicList.get(position);
                 genre = music.getGenre();
                 doc_id = music.getId();
@@ -142,7 +140,7 @@ public class MakeAComment extends AppCompatActivity {
 
         FirebaseUtils.postComment( comment);
 
-       /** db.collection("hihop_posts").document(doc_id).collection("comments")
+       /* db.collection("hihop_posts").document(doc_id).collection("comments")
                 .add(comment)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
@@ -167,7 +165,7 @@ public class MakeAComment extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
 
                     }
-                });**/
+                });*/
 
     }
 }

@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         intent = new Intent(getApplicationContext(), MusicPlayService.class);
-        setSupportActionBar((Toolbar) findViewById(R.id.top_toolbar));
+        setSupportActionBar(findViewById(R.id.top_toolbar));
         actionBar = getSupportActionBar();
         assert actionBar != null;
         actionBar.setDisplayShowTitleEnabled(false);
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         post = findViewById(R.id.post_button);
 
-       bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new
          BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private ServiceConnection connection = new ServiceConnection() {
+    private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             MusicPlayService.LocalBinder binder = (MusicPlayService.LocalBinder) service;

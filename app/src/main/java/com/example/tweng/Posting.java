@@ -69,8 +69,8 @@ public class Posting extends AppCompatActivity {
     String genreSelected, selectedSongTitle, title, album, artist;
     Bitmap bitmap;
     private FirebaseAuth mAuth;
-    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     //DatabaseReference reference;
 
     @Override
@@ -104,6 +104,7 @@ public class Posting extends AppCompatActivity {
 
 
         selectSong.setOnClickListener(new View.OnClickListener() {
+            //files keep stopping
             @Override
             public void onClick(View v) {
                 openAudioFile(v);
@@ -141,6 +142,7 @@ public class Posting extends AppCompatActivity {
         choose_art.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // files keep stopping
                 Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
                 startActivityForResult(intent, 110);

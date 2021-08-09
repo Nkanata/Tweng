@@ -74,12 +74,7 @@ public class Splash extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         //googleSignInButton.setVisibility(VISIBLE);
-        googleSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signIn();
-            }
-        });
+        googleSignInButton.setOnClickListener(view -> signIn());
 
        /* ViewGroup rootView = (ViewGroup) findViewById(R.id.splashScreen);
         Fade mFade = new Fade(Fade.IN);
@@ -224,8 +219,6 @@ public class Splash extends AppCompatActivity {
                     }
 
                 });
-
-
     }
 
 

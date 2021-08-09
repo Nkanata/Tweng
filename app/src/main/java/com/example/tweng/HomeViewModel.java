@@ -16,8 +16,8 @@ import java.util.List;
 public class HomeViewModel extends ViewModel {
     // TODO: Implement the ViewModel
     private MutableLiveData<List<Music>> musicPostLiveData;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private String TAG = "HomeViewModel Listener";
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final String TAG = "HomeViewModel Listener";
 
     //
     public LiveData<List<Music>> getMusicPost() {
@@ -32,6 +32,7 @@ public class HomeViewModel extends ViewModel {
 
     public void listenToPosts() {
         final List<Music> musicList = new ArrayList<>();
+        
         CollectionReference hiphop_posts = db.collection("posts").document("Hip-Hop").collection("music_posts");
         hiphop_posts.limit(25);
         hiphop_posts.addSnapshotListener((queryDocumentSnapshots, e) -> {
@@ -40,7 +41,7 @@ public class HomeViewModel extends ViewModel {
                 return;
             }
 
-            Log.d(TAG, "not null querry snapshots");
+            Log.d(TAG, "not null query snapshots");
             assert queryDocumentSnapshots != null;
             //DocumentChange documentChange = new DocumentChange();
             for (DocumentChange dc : queryDocumentSnapshots.getDocumentChanges()) {

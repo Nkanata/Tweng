@@ -30,14 +30,14 @@ import java.util.Map;
 
 public class FirebaseUtils {
     private FirebaseAuth mAuth;
-    private static FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    private static FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private static final FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static Map<String, Object> channel = new HashMap<>();
 
 
     private static CollectionReference chatChanelCollectionRef = db.collection("ChatChannels");
     private static DocumentReference currentUserDocRef = db.collection("Users").document(user.getUid());
-    ;
+
     private static CollectionReference usersCollectionRef = db.collection("Users");
     static String TAG = "FirebaseUtils";
 

@@ -37,7 +37,7 @@ public class SearchableActivity extends AppCompatActivity {
     Toolbar toolbar;
     ActionBar actionBar;
     SearchView searchView;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
     List<Music> resultList = new ArrayList<>();
     List<GuestProfile> influence_rsList = new ArrayList<>();
     RecyclerView influence_rs;
